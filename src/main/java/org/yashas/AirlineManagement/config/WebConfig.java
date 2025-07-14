@@ -1,4 +1,3 @@
-// src/main/java/org/yashas/AirlineManagement/config/WebConfig.java
 package org.yashas.AirlineManagement.config;
 
 import org.springframework.context.annotation.Bean;
@@ -14,8 +13,8 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*") // allow all for now
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
+                        .allowedOrigins("https://sky-bound-navigator-ui.vercel.app") // or "*" for local testing
+                        .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS");
             }
         };
     }
